@@ -1,6 +1,7 @@
 import { useState,useEffect, useContext } from "react"
 import Item from "./Item";
 import Error from "./Error";
+import Loader from "./Loader";
 import useHttp from "../Hooks/useHttp";
 
 
@@ -15,7 +16,7 @@ export default function MealItem(){
     
 
         if(isLoading){
-            return( <p className="center">Meals are Loading</p>)
+            return( <Loader></Loader>)
         }
 
             if(error){
